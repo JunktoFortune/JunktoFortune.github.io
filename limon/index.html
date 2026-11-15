@@ -200,7 +200,7 @@ function draw() {
   if (!pool.length) pool = LISTINGS.filter(l => !S.used.has(l.id));
   const l = pool[Math.floor(Math.random() * pool.length)];
   S.used.add(l.id);
-  const plate = String(10 + Math.floor(Math.random() * 70)) + " " + PLATE_L[Math.floor(Math.random() * PLATE_L.length)] + " " + String(100 + Math.floor(Math.random() * 899));
+  const plate = String(10 + Math.floor(Math.random() * 70)) + " " + PLATE_L[Math.floor(Math.random() * PLATE_L.length)] + " " + String(10000 + Math.floor(Math.random() * 90000));
   return Object.assign({ plate }, l);
 }
 const fmtKm = n => n.toLocaleString("tr-TR") + " km";
